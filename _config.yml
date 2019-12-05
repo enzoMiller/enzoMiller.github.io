@@ -86,7 +86,7 @@ author:
   location         : "Paris"
   employer         :
   pubmed           : "https://www.ncbi.nlm.nih.gov/pubmed/?term=john+snow"
-  googlescholar    : "to be created"
+  googlescholar    : "https://scholar.google.com/citations?user=Nd8ggvcAAAAJ&hl=en"
   email            :
   researchgate     :  # example: "https://www.researchgate.net/profile/yourprofile"
   uri              :
@@ -102,7 +102,7 @@ author:
   instagram        :
   impactstory      : #"https://profiles.impactstory.org/u/xxxx-xxxx-xxxx-xxxx"
   lastfm           :
-  linkedin         :
+  linkedin         : "https://www.linkedin.com/in/enzo-miller-0b0777ab/"
   orcid            : 
   pinterest        :
   soundcloud       :
