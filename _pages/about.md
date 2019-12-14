@@ -16,4 +16,4 @@ My research interest lies at the boundary between stochastic control, infinite d
 
 Upcoming events:
 ======
-_January 29-31 2020_: I will present our paper Linear–Quadratic optimal control for a class of stochastic Volterra equations: solvability and approximation at [QFW2020](http://qfw2020.uniparthenope.it/) in Naples, Italy.
+*January 29-31 2020*: I will present our paper [Linear–Quadratic optimal control for a class of stochastic Volterra equations: solvability and approximation](https://arxiv.org/abs/1911.01900) at [QFW2020](http://qfw2020.uniparthenope.it/) in Naples, Italy.
