@@ -10,6 +10,8 @@ redirect_from:
 {% include base_path %}
 
 [Download](https://enzoMiller.github.io/files/cv-enzo-miller.pdf) a pdf version.
+
+
 Publications
 ======
   <ul>{% for post in site.publications %}
