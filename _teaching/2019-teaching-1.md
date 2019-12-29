@@ -21,5 +21,5 @@ For the different partials and exam I advise to regularly do exercices. First yo
 - Counting: [link1](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/denombrement-theo&type=fexo), [link2](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/denombrement&type=fexo)
 - Random variables: [link1](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/vacontinue&type=fexo), [link2](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/vacontinueusuelles&type=fexo),  [link3](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/vagenerale&type=fexo), [link4](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/proba/vectalea&type=fexo)
 
-## Partial
+## Partial (for my class)
 - [First partial](https://enzoMiller.github.io/files/cv-enzo-miller.pdf)
