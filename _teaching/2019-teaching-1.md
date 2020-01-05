@@ -22,4 +22,4 @@ For the different partials and exam try to regularly do exercices. First you can
 
 
 ## Partial (for my class)
-- [First partial](https://enzoMiller.github.io/files/cv-enzo-miller.pdf)
+- [First partial](https://enzoMiller.github.io/files/Interro1A.pdf)
