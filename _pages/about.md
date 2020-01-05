@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student at [LPSM](https://www.lpsm.paris/) (Laboratoire de Probabilités, Statistique et Modélisation), at Université Paris-Diderot in Paris, France, since September 2018. My advisor is [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/).
+I am a PhD student at [LPSM](https://www.lpsm.paris/) (Laboratoire de Probabilités, Statistique et Modélisation), at Université Paris-Diderot in Paris, France, since September 2018. My advisors are [Huyên Pham](https://sites.google.com/site/phamxuanhuyen/) and [René Aïd](https://sites.google.com/view/reneaid).
 
 Research interests
 ======
