@@ -2,7 +2,7 @@
 title: "Linear Algebra L1"
 collection: teaching
 type: "Undergraduate course"
-permalink: /teaching/2020-teaching-3
+permalink: /teaching/2020-algebre-lineaire-L1
 venue: "University Paris-Diderot"
 date: 2020-01-01
 location: "Paris, France"
