@@ -13,7 +13,8 @@ location: "Paris, France"
 
 
 
-
+## New organisation for the confinement 
+I now gives lectures here : [link to class](https://bbb1.math.univ-paris-diderot.fr/b/enz-d4e-ddt) every monday at 2pm, wednesday at 9am and Thursday at 1.45am. Send me an email at enzo.miller[at]polytechnique.org if you want to attend. 
 
 ## Some references 
 For the different partials and exams try to regularly do exercices. I suggest here a good source of corrected exercices (search them at least 20min !). If you don't have time to do them all, it's ok :), (but note that with Covid-19 you have more time than ever ;)). Try to do at least one per day. I advise you to look at those ones :
@@ -21,8 +22,10 @@ For the different partials and exams try to regularly do exercices. I suggest he
 - Dimension finie : exercices théoriques [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/dimfinietheo&type=fexo),
 - Espaces vectoriels : combinaisons linéaires, familles libres, génératrices [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/evfamilleslibres&type=fexo)
 - Espaces vectoriels : sous-espaces vectoriels [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/evsevs&type=fexo)
-- Matrices [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matrices&type=fexo)
-- Matrices et applications linéaires [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matricesal&type=fexo)
+- Matrices : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matrices&type=fexo)
+- Matrices et applications linéaires : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matricesal&type=fexo)
+- Continuité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/limitecontinuite&type=fexo)
+- Dérivabilité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/derivee&type=fexo)
 
 
 If you need any help don't hesistate to contact me ! 
