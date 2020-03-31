@@ -24,7 +24,7 @@ For the different partials and exams try to regularly do exercices. I suggest he
 - Espaces vectoriels : sous-espaces vectoriels [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/evsevs&type=fexo)
 - Matrices : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matrices&type=fexo)
 - Matrices et applications linéaires : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matricesal&type=fexo)
-- Continuité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/limitecontinuite&type=fexo)
+- Limite et continuité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/limitecontinuite&type=fexo)
 - Dérivabilité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/derivee&type=fexo)
 
 
