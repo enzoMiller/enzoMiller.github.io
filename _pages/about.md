@@ -14,8 +14,4 @@ Research interests
 ======
 My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them.
 
-Upcoming events:
-======
-**January 13-18 2020:** I will present our paper [Linear–Quadratic optimal control for a class of stochastic Volterra equations: solvability and approximation](https://arxiv.org/abs/1911.01900) at [Bachelier Colloquium](http://ykabanov.perso.math.cnrs.fr/Bachelier2020/programmes%20angl/programme2_B3_ang.html) in Metabief, France.
 
-**January 29-31 2020:** I will present our paper [Linear–Quadratic optimal control for a class of stochastic Volterra equations: solvability and approximation](https://arxiv.org/abs/1911.01900) at [QFW2020](http://qfw2020.uniparthenope.it/) in Naples, Italy.
