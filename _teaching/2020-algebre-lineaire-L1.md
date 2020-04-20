@@ -26,6 +26,7 @@ For the different partials and exams try to regularly do exercices. I suggest he
 - Matrices et applications linéaires : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=bde/algebrelineaire/matricesal&type=fexo)
 - Limite et continuité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/limitecontinuite&type=fexo)
 - Dérivabilité : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/derivee&type=fexo)
+- Dévelloppement limités : [link](http://www.bibmath.net/ressources/index.php?action=affiche&quoi=mathsup/feuillesexo/dls&type=fexo)
 
 
 If you need any help don't hesistate to contact me ! 
