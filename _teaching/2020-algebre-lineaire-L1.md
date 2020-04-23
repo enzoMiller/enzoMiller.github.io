@@ -14,7 +14,7 @@ location: "Paris, France"
 
 
 ## New organisation for the confinement 
-I now give lectures here : [link to class](https://bbb1.math.univ-paris-diderot.fr/b/enz-d4e-ddt) every Monday at 2pm, Wednesday at 9am and Thursday at 1.45pm. Send me an email at enzo.miller[at]polytechnique.org if you want to attend so that I have an idea of the attendance I can expect. 
+I now give lectures here : [link to class](https://bbb1.math.univ-paris-diderot.fr/b/enz-d4e-ddt) every Monday at 2pm. Send me an email at enzo.miller[at]polytechnique.org if you want to attend so that I have an idea of the attendance. 
 
 ## Some references 
 For the different partials and exams try to regularly do exercices. I suggest here a good source of corrected exercices (search them at least 20min !). If you don't have time to do them all, it's ok :), (but note that with Covid-19 you have more time than ever ;)). Try to do at least one per day. I advise you to look at those ones :
