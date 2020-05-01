@@ -1,7 +1,7 @@
 ---
 title: 'A short introduction to optimal control - In preparation !'
 date: 2020-05-20
-permalink: /posts/2012/08/blog-post-1/
+permalink: /posts/2020/05/optimal-control/
 tags:
   - optimal
   - control
