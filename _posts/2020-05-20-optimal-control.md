@@ -8,7 +8,7 @@ tags:
 ---
 What is optimal control ?
 ======
-Okay let's give a short answer : `You have a thing/system which is moving and over which you have a control. Your goal is then to choose the best control in order to minimize a cost`. In general you have **3 features** that you monitor : 
+Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
 - **A control** $\alpha$ over $X$,
 - **A Loss criterion** $J$ that you want to minimize.
@@ -17,7 +17,7 @@ Your goal is simple : you want to find the best control $\alpha$ over $X$ so tha
 \\[ X_t = x + \int_0^t b(X_s, \alpha_s)ds, \qquad t \in [0, T], \\]
 and a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
-The number $J(t,x,\alpha)$ is to be interpreted as `the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$`. 
+The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$*. 
 
 Euh... can you give me some examples ?
 ======
