@@ -9,6 +9,7 @@ tags:
 This is a very non-mathematical and straightforward presentation of what is optimal control. The goal is to see :
 1. What it is mainly about,
 2. Some ideas to solve the problems we are about to see. 
+To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows imagination to fill the gap and go further ;)
 
 So...what is optimal control ?
 ======
@@ -17,7 +18,7 @@ Okay let's give a short answer : *You have a thing/system which is moving with t
 - **A control** $\alpha$ over $X$,
 - **A Loss criterion** $J$ that you want to minimize.
 
-Your goal is simple : you want to find the best control $\alpha$ over $X$ so that you minimize your cost $J$. So cassically we first define a model for the pair State-Control  
+Your goal is simple : you want to find the best control $\alpha$ over $X$ so that you minimize your cost $J$. So cassically we first define a model other the system :  
 \\[ X_t = x + \int_0^t b(s, X_s, \alpha_s)ds, \qquad t \in [0, T], \label{eq:dynamic} \\]
 where $b$ is a given model. And a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
