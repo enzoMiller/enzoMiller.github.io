@@ -1,5 +1,5 @@
 ---
-title: "Linear Algebra & Analysis L1"
+title: "Linear Algebra & Analysis L1 (2019/2020)"
 collection: teaching
 type: "Undergraduate course"
 permalink: /teaching/2020-algebre-lineaire-L1
