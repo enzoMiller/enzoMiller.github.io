@@ -31,13 +31,13 @@ Note here the introduction of a new function : the **value function** $V$. Basic
 
 Euh... can you give me some examples ?
 ======
-__First let's give a toy example : An eagle an a bird__ 
+__First a toy example : An eagle an a bird__ 
 
-Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so $\frac{d X_t}{dt} = \alpha_t$ or as we prefer to write $X_t = X_0 + \int_0^t \alpha_s ds$ with $X_0$ being your initial position. Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. You want to get close to this beautiful prey, but it is costly for you to go fast, so you decide that your loss criterion to minimize will be something like 
+Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so $\frac{d X_t}{dt} = \alpha_t$ or as we prefer to write $X_t = x + \int_0^t \alpha_s ds$ with $x$ being your initial position. Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. You want to get close to this beautiful prey, but it is costly for you to go fast, so you decide that your loss criterion to minimize will be something like 
 \\[\int_0^T \left(\lambda(X_t - P_t)^2 + N\alpha_t^2 \right) dt + X_T^2,\\] 
 where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. 
 
-__Let's see another example closer to the real world : Controlling a battery linked to a solar panel and the grid__ 
+__Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
 Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your (solar panel, battery). So Here we have :
 - **A system (the battery)** whose state $X$ is the ammount of electricity inside it,
 - **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
