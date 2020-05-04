@@ -38,6 +38,7 @@ Assume you are an eagle. You are hungry. You want to eat. So you are seeking a p
 where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. 
 
 __Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
+
 Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your (solar panel, battery). So Here we have :
 - **A system (the battery)** whose state $X$ is the ammount of electricity inside it,
 - **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
