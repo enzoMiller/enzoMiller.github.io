@@ -19,7 +19,7 @@ Okay let's give a short answer : *You have a thing/system which is moving with t
 - **A control** $\alpha$ over $X$,
 - **A Loss criterion** $J$ that you want to minimize.
 
-Your goal is simple : you want to find the best control $\alpha$ over $X$ so that you minimize your cost $J$. So cassically we first define a model other the system :  
+Your goal is simple : you want to find the best control $\alpha$ over $X$ so that you minimize your cost $J$. So classically we first define a model other the system :  
 \\[ X_t = x + \int_0^t b(s, X_s, \alpha_s)ds, \qquad t \in [0, T], \label{eq:dynamic} \\]
 where $b$ is a given model. And a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
