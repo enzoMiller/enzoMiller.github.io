@@ -9,6 +9,7 @@ tags:
 This is a very non-mathematical and straightforward presentation of what is optimal control. The goal is to see :
 1. What it is mainly about,
 2. Some ideas to solve the problems we are about to see. 
+
 To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows imagination to fill the gap and go further ;)
 
 So...what is optimal control ?
