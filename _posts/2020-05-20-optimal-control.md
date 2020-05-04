@@ -18,12 +18,12 @@ Okay let's give a short answer : *You have a thing/system which is moving with t
 - **A Loss criterion** $J$ that you want to minimize.
 
 Your goal is simple : you want to find the best control $\alpha$ over $X$ so that you minimize your cost $J$. So cassically we first define a model for the pair State-Control  
-\\[ X_t = x + \int_0^t b(X_s, \alpha_s)ds, \qquad t \in [0, T], \label{eq:dynamic} \\]
+\\[ X_t = x + \int_0^t b(s, X_s, \alpha_s)ds, \qquad t \in [0, T], \label{eq:dynamic} \\]
 where $b$ is a given model. And a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
 The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$*. To sum up, what you have to do is simple 
-1. Define a model for you system, ie : $b$,
-2. Define a loss criterion $J$,
+1. Define a model for you system, ie : $(t, x,\alpha) \mapsto b(t, x,\alpha)$,
+2. Define a loss criterion $(t,x,\alpha) \mapsto J(t,x,\alpha)$,
 3. Solve the optimization problem \\[ V(t,x)= \inf_{\alpha} J(t,x,\alpha)\\].
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
 
