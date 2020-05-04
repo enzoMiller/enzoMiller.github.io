@@ -24,8 +24,8 @@ where $b$ is a given model. And a loss criterion that we want to minimize
 The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$*. To sum up, what you have to do is simple 
 1. Define a model for you system, ie : $b$,
 2. Define a loss criterion $J$,
-3. Solve the optimization problem \\[ V(t,x)= \inf_{\substack{\alpha \\ s.t. X \text{ satisfies } \eqref{eq:dynamic}}} J(t,x,\alpha)\\].
-$\eqref{eq:dynamic}$ Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put star on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
+3. Solve the optimization problem \\[ V(t,x)= \inf_{\alpha} J(t,x,\alpha)\\].
+Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
 
 Euh... can you give me some examples ?
 ======
