@@ -12,6 +12,6 @@ I am a PhD student at [LPSM](https://www.lpsm.paris/) (Laboratoire de Probabilit
 
 Research interests
 ======
-My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them.
+My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them. The infinite dimensional structures I am tackling (Hilbert or even Banach spaces) lead me towards the use of deep learning.
 
 
