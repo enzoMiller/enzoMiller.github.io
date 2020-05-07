@@ -24,7 +24,7 @@ Your goal is simple : you want to find the best control $\alpha$ over $X$ so tha
 where $b$ is a given model. And a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
 The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$*. To sum up, what you have to do is simple 
-1. Define a model for you system, ie : $(t, x,\alpha) \mapsto b(t, x,\alpha)$,
+1. Define a model of your system, ie : $(t, x,\alpha) \mapsto b(t, x,\alpha)$,
 2. Define a loss criterion $(t,x,\alpha) \mapsto J(t,x,\alpha)$,
 3. Solve the optimization problem $ V(t,x)= \inf_{\alpha} J(t,x,\alpha)$.
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
@@ -33,9 +33,11 @@ Euh... can you give me some examples ?
 ======
 __First a toy example : An eagle an a bird__ 
 
-Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so $\frac{d X_t}{dt} = \alpha_t$ or as we prefer to write $X_t = x + \int_0^t \alpha_s ds$ with $x$ being your initial position. Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. You want to get close to this beautiful prey, but it is costly for you to go fast, so you decide that your loss criterion to minimize will be something like 
+Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so **the model of your system** is $\frac{d X_t}{dt} = \alpha_t$ with $x$ being your initial position. Or as we prefer to write 
+\\[X_t = x + \int_0^t \alpha_s ds. \\]
+Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. You want to get close to this beautiful prey, but it is costly for you to go fast, so you decide that your **loss criterion** to minimize will be something like 
 \\[\int_0^T \left(\lambda(X_t - P_t)^2 + N\alpha_t^2 \right) dt + X_T^2,\\] 
-where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. 
+where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. That's it ! We have defined a **model**, **loss criterion** and the only things that remains to do is to solve the constrained minimization problem ! (See below)
 
 __Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
 
