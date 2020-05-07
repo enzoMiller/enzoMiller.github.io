@@ -1,7 +1,7 @@
 ---
 title: 'Deep Learning and Stochastic Control - In preparation !'
 date: 2020-06-05
-permalink: /posts/2020/06/optimal-control-storage-deep-learning/
+permalink: /posts/2020/06/stochastic-control-storage-deep-learning/
 tags:
   - optimal
   - stochastic
