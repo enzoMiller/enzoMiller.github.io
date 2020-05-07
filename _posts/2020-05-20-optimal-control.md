@@ -49,7 +49,8 @@ Assume you have a solar panel above your home. This solar panel is linked to a b
 - **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
 - **A loss criterion** $J$ that we define the bill at the end of the month.
 
-[link](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/)
+
+If you're intersted to see a real implementation of this kind of stuff with neural nets and amore realistic model you can go [there](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! 
 
 Ok so... What do we want ? 
 ======
