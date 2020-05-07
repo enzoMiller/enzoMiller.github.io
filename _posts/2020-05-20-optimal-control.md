@@ -24,9 +24,10 @@ Your goal is simple : you want to find the best control $\alpha$ over $X$ so tha
 where $b$ is a given model. And a loss criterion that we want to minimize
 \\[J(t,x,\alpha) = \int_t^T f(X_s, \alpha_s)ds + g(X_T).\\]
 The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will pay if, on $[t,T]$, you implement the strategy $\alpha$ when your state start at $X_t=x$*. To sum up, what you have to do is simple 
-1. Define a model of your system, ie : $(t, x,\alpha) \mapsto b(t, x,\alpha)$,
-2. Define a loss criterion $(t,x,\alpha) \mapsto J(t,x,\alpha)$,
-3. Solve the optimization problem $ V(t,x)= \inf_{\alpha} J(t,x,\alpha)$.
+1. Define a **model** of your system, ie : $(t, x,\alpha) \mapsto b(t, x,\alpha)$,
+2. Define a **loss criterion** $(t,x,\alpha) \mapsto J(t,x,\alpha)$,
+3. **Solve the minimization** problem $ V(t,x)= \inf_{\alpha} J(t,x,\alpha)$.
+
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
 
 Euh... can you give me some examples ?
@@ -37,19 +38,22 @@ Assume you are an eagle. You are hungry. You want to eat. So you are seeking a p
 \\[X_t = x + \int_0^t \alpha_s ds. \\]
 Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. You want to get close to this beautiful prey, but it is costly for you to go fast, so you decide that your **loss criterion** to minimize will be something like 
 \\[\int_0^T \left(\lambda(X_t - P_t)^2 + N\alpha_t^2 \right) dt + X_T^2,\\] 
-where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. That's it ! We have defined a **model**, **loss criterion** and the only things that remains to do is to solve the constrained minimization problem ! (See below)
+where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. That's it ! We have defined a **model**, **loss criterion** and the only things that remains to do is to **solve the minimization** problem ! (See below)
 
 __Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
-
+![image info](./images/control_battery.jpg)
 Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your (solar panel, battery). So Here we have :
 - **A system (the battery)** whose state $X$ is the ammount of electricity inside it,
 - **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
-- **A loss criterion** $J$ that is the bill at the end of the month.
+- **A loss criterion** $J$ that we define the bill at the end of the month.
+
+[link](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/)
 
 Ok so... What do we want ? 
 ======
+Basically 2 things : you want the optimal control $\alpha^*$ and the price you're going to pay (i.e. the value fonction $(t,x) \mapsto V(t,x)$.)
 
-Nice how do I get it in general?
+Nice how do I get it in general ?
 ======
 
 Can you solve the problem explicitly ?
