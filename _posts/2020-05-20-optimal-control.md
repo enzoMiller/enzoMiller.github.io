@@ -71,7 +71,7 @@ Usually no, in generak we don't have any explicit formulas for the optimal contr
 \\[ d X_t = (A X_t + B X_t) dt. \\]
 and the **cost criterion**  : 
 \\[J(t,x,\alpha) = \int_t^T Q X_s^2 + N \alpha_s^2 ds + P X_T^2, \\]
-were $A,B,Q,N$ could be real numbers, matrices, (linear operator)[https://mathworld.wolfram.com/LinearOperator.html], etc.
+were $A,B,Q,N$ could be real numbers, matrices, [linear operator](https://mathworld.wolfram.com/LinearOperator.html), etc.
 As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
 
 <details>
