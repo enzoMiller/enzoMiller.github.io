@@ -12,7 +12,7 @@ This is a very non-mathematical and straightforward presentation of what is opti
 
 To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
-1)So...what is optimal control ?
+So...what is optimal control ?
 ======
 Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
@@ -75,7 +75,7 @@ were $A,B,Q,N$ could be real numbers, matrices, (linear operator)[https://mathwo
 As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
 
 <details>
-  <summary> ## Click to expand! </summary>
+  <summary> <h1> Click to expand! </h1></summary>
   
   ## Heading
   1. A numbered
