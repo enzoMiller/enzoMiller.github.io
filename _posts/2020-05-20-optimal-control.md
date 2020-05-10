@@ -12,15 +12,6 @@ This is a very non-mathematical and straightforward presentation of what is opti
 
 To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
-<details>
-  <summary>  <b>This text is bold</b></summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
-</details>
 
 <details>
   <summary> <b>So...what is optimal control ?</b></summary>
