@@ -12,8 +12,19 @@ This is a very non-mathematical and straightforward presentation of what is opti
 
 To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
-So...what is optimal control ?
-======
+<details>
+  <summary>  <b>This text is bold</b></summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
+
+<details>
+  <summary> <b>So...what is optimal control ?</b></summary>
+  
 Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
 - **A control** $\alpha$ over $X$,
@@ -29,9 +40,10 @@ The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will p
 3. **Solve the minimization** problem $ V(t,x)= \inf_{\alpha} J(t,x,\alpha)$.
 
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
+</details>
 
-Euh... can you give me some examples ?
-======
+<details>
+  <summary>  <b>Euh... can you give me some examples ?</b></summary>
 __First a toy example : An eagle an a bird__ 
 
 Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so **the model of your system** is $\frac{d X_t}{dt} = \alpha_t$ with $x$ being your initial position. Or as we prefer to write 
@@ -54,19 +66,21 @@ Okay let's be more precise now.  As a simple first appraoch to the problem (for 
 \\[ dX_t = \alpha_t dt, \qquad X_t \in [0, B_{max}], \alpha_t \in [-1, 1] .\\]
 Here $X$ is the ammount of energy inside your battery (unit $J$) and $\alpha$ is the ammount of energy per unit of time you are putting into the battery ($\alpha>0$ : you are charging the battery, $\alpha<0$ you are discharging it).
 
-
-
 If you're intersted to see a real implementation of this kind of stuff with neural nets and amore realistic model you can go [there](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! 
+</details>
 
-Ok so... What do we want ? 
-======
+<details>
+  <summary>  <b>Ok so... What do we want ?</b></summary>
 Basically 2 things : you want the optimal control $\alpha^*$ and the price you're going to pay (i.e. the value fonction $(t,x) \mapsto V(t,x)$.)
 
-Nice how do I get it in general ?
-======
+</details>
 
-Can you solve the problem explicitly ?
-======
+<details>
+  <summary>  <b>Nice how do I get it in general ?</b></summary>
+</details>
+
+<details>
+  <summary>  <b>Can you solve the problem explicitly ?</b></summary>
 Usually no, in generak we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
 \\[ d X_t = (A X_t + B X_t) dt. \\]
 and the **cost criterion**  : 
@@ -74,12 +88,5 @@ and the **cost criterion**  :
 were $A,B,Q,N$ could be real numbers, matrices, [linear operator](https://mathworld.wolfram.com/LinearOperator.html), etc.
 As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
 
-<details>
-  <summary>  <b>This text is bold</b></summary>
-  
-  ## Heading
-  1. A numbered
-  2. list
-     * With some
-     * Sub bullets
 </details>
+
