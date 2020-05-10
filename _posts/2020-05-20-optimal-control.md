@@ -75,7 +75,7 @@ were $A,B,Q,N$ could be real numbers, matrices, [linear operator](https://mathwo
 As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
 
 <details>
-  <summary> <h3> Click to expand! </h3></summary>
+  <summary>  <b>This text is bold</b></summary>
   
   ## Heading
   1. A numbered
