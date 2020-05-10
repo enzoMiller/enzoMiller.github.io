@@ -12,7 +12,7 @@ This is a very non-mathematical and straightforward presentation of what is opti
 
 To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
-So...what is optimal control ?
+1)So...what is optimal control ?
 ======
 Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
@@ -42,12 +42,18 @@ where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda
 
 __Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
 
+Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). So we have the following situation : 
+
 <img src="https://enzoMiller.github.io/images/control_battery.jpg" width="400">
 
-Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your (solar panel, battery). So Here we have :
+Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your *solar panel & battery*. So Here we have :
 - **A system (the battery)** whose state $X$ is the ammount of electricity inside it,
 - **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
 - **A loss criterion** $J$ that we define the bill at the end of the month.
+Okay let's be more precise now.  As a simple first appraoch to the problem (for a more sophisticated model you can check this [post](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/)) we could propose for the **model**:
+\\[ dX_t = \alpha_t dt, \qquad X_t \in [0, B_{max}], \alpha_t \in [-1, 1] .\\]
+Here $X$ is the ammount of energy inside your battery (unit $J$) and $\alpha$ is the ammount of energy per unit of time you are putting into the battery ($\alpha>0$ : you are charging the battery, $\alpha<0$ you are discharging it).
+
 
 
 If you're intersted to see a real implementation of this kind of stuff with neural nets and amore realistic model you can go [there](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! 
@@ -61,12 +67,19 @@ Nice how do I get it in general ?
 
 Can you solve the problem explicitly ?
 ======
+Usually no, in generak we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
+\\[ d X_t = (A X_t + B X_t) dt. \\]
+and the **cost criterion**  : 
+\\[J(t,x,\alpha) = \int_t^T Q X_s^2 + N \alpha_s^2 ds + P X_T^2, \\]
+were $A,B,Q,N$ could be real numbers, matrices, (linear operator)[https://mathworld.wolfram.com/LinearOperator.html], etc.
+As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
 
-
-This is a sample blog post. Lorem ipsum I can't remember the rest of lorem ipsum and don't have an internet connection right now. Testing testing testing this blog post. Blog posts are cool.
-
-
-
-
-Aren't headings cool?
-------
+<details>
+  <summary> ## Click to expand! </summary>
+  
+  ## Heading
+  1. A numbered
+  2. list
+     * With some
+     * Sub bullets
+</details>
