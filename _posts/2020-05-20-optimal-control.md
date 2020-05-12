@@ -63,6 +63,7 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 > An optimal policy has the property that whatever the initial decision is, the remaining decisions must constitute an optimal policy (with regard to the state resulting from the first decision)
 >
 > <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I modified the sentence a little bit)</cite>
+
 So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if you act optimally, with $\alpha^*$ from now on. 
 
 $$
@@ -70,6 +71,10 @@ $$
   V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T) \\
   &= \int_t^{t+h} f(X^*_s, \alpha^*_s) ds +...
 \end{align}
+$$
+
+$$
+a
 $$
 
 
