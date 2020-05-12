@@ -56,11 +56,23 @@ Basically 2 things : you want the **optimal control** $\alpha^*$ and the price y
 Nice ! How can I get them in general ?
 ====
 There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a normal human being would prefer to see Bellman principle, so in this introduction I will quickly present it ! 
+
 __What is the Bellman principle ?__
+
 I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book : *Dynamic programming*) :
-> An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision
+> An optimal policy has the property that whatever the initial decision is, the remaining decisions must constitute an optimal policy (with regard to the state resulting from the first decision)
 >
-> -- <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a></cite>
+> <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I modified the sentence a little bit)</cite>
+So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if you act optimally, with $\alpha^*$ from now on. 
+
+$$
+\begin{align}
+  V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T) \\
+  &= \int_t^{t+h} f(X^*_s, \alpha^*_s) ds +...
+\end{align}
+$$
+
+
 
 __Ok so... what next ?__
 
