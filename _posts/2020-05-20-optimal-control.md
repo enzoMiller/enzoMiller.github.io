@@ -64,19 +64,11 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 >
 > <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I modified the sentence a little bit)</cite>
 
-So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^*$. 
-
+So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^*$. Since $\alpha^*$ is optimal we have :
 $$
-\begin{align}
-  V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T) \\
-  &= \int_t^{t+h} f(X^*_s, \alpha^*_s) ds +...
-\end{align}
+  V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T).
 $$
-
-$$
-a
-$$
-
+The idea is then to ask ourselves... (to continue)
 
 
 __Ok so... what next ?__
