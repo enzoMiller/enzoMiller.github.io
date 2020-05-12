@@ -35,7 +35,7 @@ Note here the introduction of a new function : the **value function** $V$. Basic
 
 Euh... can you give me some examples ?
 ==
-__First a toy example : An eagle an a bird__ 
+__A toy example : An eagle an a bird__ 
 
 Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so **the model of your system** is $\frac{d X_t}{dt} = \alpha_t$ with $x$ being your initial position. Or as we prefer to write 
 \\[X_t = x + \int_0^t \alpha_s ds. \\]
@@ -43,34 +43,26 @@ Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. Yo
 \\[\int_0^T \left(\lambda(X_t - P_t)^2 + N\alpha_t^2 \right) dt + X_T^2,\\] 
 where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. That's it ! We have defined a **model**, **loss criterion** and the only things that remains to do is to **solve the minimization** problem ! (See below)
 
-__Another example closer to the real world : Controlling a battery linked to a solar panel and a grid__ 
 
-Assume you have a solar panel above your home. This solar panel is linked to a battery that you can charge or discharge. Everyday you need some electricity that you can either get from your electrical outlet or from your battery (that you hope is charged when you need it). So we have the following situation : 
+If you're intersted to see an example closer to the real world with a real implementation with neural nets you can go to this  [posts](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! (it's about electric battery storage and how to optimally control it when want to minimize your bill when you have a solar panel, a grid, random market prices, etc) 
 
-<img src="https://enzoMiller.github.io/images/control_battery.jpg" width="400">
-
-Of course every month you pay the electricity you get from the electrical outlet. So your goal is to minimize your bill at the end of the month thanks to to your *solar panel & battery*. So Here we have :
-- **A system (the battery)** whose state $X$ is the ammount of electricity inside it,
-- **A control** $\alpha$ over the quantity of electricity $X$ (you can charge or discharge the battery),
-- **A loss criterion** $J$ that we define the bill at the end of the month.
-Okay let's be more precise now.  As a simple first appraoch to the problem (for a more sophisticated model you can check this [post](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/)) we could propose for the **model**:
-\\[ dX_t = \alpha_t dt, \qquad X_t \in [0, B_{max}], \alpha_t \in [-1, 1] .\\]
-Here $X$ is the ammount of energy inside your battery (unit $J$) and $\alpha$ is the ammount of energy per unit of time you are putting into the battery ($\alpha>0$ : you are charging the battery, $\alpha<0$ you are discharging it).
-
-If you're intersted to see a real implementation of this kind of stuff with neural nets and amore realistic model you can go [there](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! 
-</details>
 
 
 Ok so... What do we want ?
 ===
-Basically 2 things : you want the optimal control $\alpha^*$ and the price you're going to pay (i.e. the value fonction $(t,x) \mapsto V(t,x)$.)
+Basically 2 things : you want the **optimal control** $\alpha^*$ and the price you're going to pay, i.e. the **value fonction** $(t,x) \mapsto V(t,x)$. 
 
 
-
-
-Nice how do I get it in general ?
+Nice ! How can I get them in general ?
 ====
+There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a normal human being would prefer to see Bellman principle, so in this introduction I will quickly present it ! 
+__What is the Bellman principle ?__
+I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book : *Dynamic programming*) :
+> An optimal policy has the property that whatever the initial state and initial decision are, the remaining decisions must constitute an optimal policy with regard to the state resulting from the first decision
+>
+> -- <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a></cite>
 
+__Ok so... what next ?__
 
 Can you solve the problem explicitly ?
 =====
