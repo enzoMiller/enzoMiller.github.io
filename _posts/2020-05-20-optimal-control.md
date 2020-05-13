@@ -10,7 +10,7 @@ This is a very non-mathematical and straightforward presentation of what is opti
 1. What it is mainly about,
 2. Some ideas to solve the problems we are about to see. 
 
-To convey the main ideas, as briefly as possible, I will present the minimum package to understand the main ideas. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
+To convey the main ideas, as briefly as possible, I will present the minimum necessary package. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
 
 So...what is optimal control ?
@@ -62,15 +62,16 @@ __What is the Bellman principle ?__
 I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book : *Dynamic programming*) :
 > An optimal policy has the property that whatever the initial decision is, the remaining decisions must constitute an optimal policy (with regard to the state resulting from the first decision)
 >
-> <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I modified the sentence a little bit)</cite>
+> <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I slightly modified the sentence)</cite>
 
 So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^*$. Since $\alpha^*$ is optimal we have :
-$$
-  V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T).
-$$
-The idea is then to ask ourselves... (to continue)
-
-
+\\[
+  V(t,x) &= \int_t^T f(X^*_s, \alpha^*_s) ds + g(X^*_T),
+\\]
+where $X^*$ is your position after under the optimal control. Now let's use the citation cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
+\\[
+  V(t,x) &= \int_t^{t+h} f(X^*_s, \alpha^*_s) ds + \underbrace{\int_{t+h}^T f(X^*_s, \alpha^*_s) ds +g(X^*_T)}_{},
+\\]
 __Ok so... what next ?__
 
 Can you solve the problem explicitly ?
