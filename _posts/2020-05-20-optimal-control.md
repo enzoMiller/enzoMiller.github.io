@@ -66,11 +66,11 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 
 So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^\star$. Since $\alpha^\star$ is optimal we have :
 \\[
-  V(t,x) &= \int_t^T f(X^\star_s, \alpha^\star_s) ds + g(X^\star_T),
+  V(t,x) = \int_t^T f(X^\star_s, \alpha^\star_s) ds + g(X^\star_T),
 \\]
 where $X^\star$ is your position after under the optimal control. Now let's use the citation cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
 \\[
-  V(t,x) &= \int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds +\int_{t+h}^T f(X^\star_s, \alpha^\star_s) ds +g(X^\star_T),
+  V(t,x) = \int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds +\int_{t+h}^T f(X^\star_s, \alpha^\star_s) ds +g(X^\star_T),
 \\]
 __Ok so... what next ?__
 
