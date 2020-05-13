@@ -70,7 +70,7 @@ So now imagine yourself wanting to act optimally. You are in state $x$ at time $
 \\]
 where $X^\star$ is your position after under the optimal control. Now let's use the citation cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
 \\[
-  V(t,x) = \int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds +\int_{t+h}^T f(X^\star_s, \alpha^\star_s) ds +g(X^\star_T),
+  V(t,x) = \int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds + \underbrace{\int_{t+h}^T f(X^\star_s, \alpha^\star_s) ds +g(X^\star_T)}_{:= V(t+h, X^\star_{t+h})},
 \\]
 __Ok so... what next ?__
 
