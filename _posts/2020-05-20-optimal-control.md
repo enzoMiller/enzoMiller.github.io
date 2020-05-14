@@ -33,7 +33,7 @@ The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will p
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
 
 
-Euh... can you give me some examples ?
+Humm...can you give me an example ?
 ==
 __A toy example : An eagle an a bird__ 
 
@@ -55,7 +55,7 @@ Basically 2 things : you want the **optimal control** $\alpha^*$ and the price y
 
 Nice ! How can I get them in general ?
 ====
-There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a normal human being would prefer to see Bellman principle, so in this introduction I will quickly present it ! 
+There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly present it ! 
 
 __What is the Bellman principle ?__
 
@@ -66,7 +66,7 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 
 So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^\star$. Since $\alpha^\star$ is optimal we have :
 \\[
-  V(t,x) = \int_t^T f(X^\star_s, \alpha^\star_s) ds + g(X^\star_T),
+  V(t,x) = \inf_\alpha \right( \int_t^T f(X^\star_s, \alpha^\star_s) ds + g(X^\star_T) \left),
 \\]
 where $X^\star$ is your position after under the optimal control. Now let's use the citation. Let's cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
 \\[
@@ -79,6 +79,14 @@ Then the thing is to notice that *the remaining decisions must constitute an opt
 As a result 
 \\[
    V(t,x) =\int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds  + V(t+h,X_{t+h}^\star).
+\\]
+Now you might see me coming, let's see what happends when $h \to 0$ :  
+\\[
+   V(t,x) = h ( f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h).
+\\]
+Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more) So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
+\\[
+   0 = \partial_t V (t,x) + f(x, a)+  b(x,a)\partial_x V (t,x).
 \\]
 
 
