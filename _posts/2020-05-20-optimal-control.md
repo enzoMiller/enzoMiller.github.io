@@ -64,37 +64,48 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 >
 > <cite><a href="https://en.wikipedia.org/wiki/Bellman_equation#Bellman's_principle_of_optimality">Wikipedia</a> (I slightly modified the sentence)</cite>
 
-So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally with $\alpha^\star$. Since $\alpha^\star$ is optimal we have :
+So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally. Recall the definition of the value function :
 \\[
-  V(t,x) = \inf_\alpha \left( \int_t^T f(X^\star_s, \alpha^\star_s) ds + g(X^\star_T) \right),
+  V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right),
 \\]
-where $X^\star$ is your position after under the optimal control. Now let's use the citation. Let's cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
+**Now pay attention we will use the Bellman principle !** let's use the citation and cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
 \\[
-  V(t,x) = \int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds + \int_{t+h}^T f(X^\star_s, \alpha^\star_s) ds +g(X^\star_T).
+  V(t,x) =\inf_\alpha \left(  \int_t^{t+h} f(X_s, \alpha_s) ds + \left( \int_{t+h}^T f(X_s, \alpha_s) ds +g(X_T)\right) \right).
 \\]
-Then the thing is to notice that *the remaining decisions must constitute an optimal policy* yields the following identity :
+Then the thing is to notice that **the remaining decisions must constitute an optimal policy** yields the following identity :
 \\[
-   \int_{t+h}^T f(X^\star_s, \alpha_s^\star) ds +g(X_T^\star)} = V(t+h,X_{t+h}^\star).
-\\]
-As a result 
-\\[
-   V(t,x) =\int_t^{t+h} f(X^\star_s, \alpha^\star_s) ds  + V(t+h,X_{t+h}^\star).
+  V(t,x) =\inf_\alpha \left(  \int_t^{t+h} f(X_s, \alpha_s) ds + V(t+h,X_{t+h}) \right).
 \\]
 Now you might see me coming, let's see what happends when $h \to 0$ :  
 \\[
-   V(t,x) = h ( f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h).
+   V(t,x) = \inf_a \left( h ( f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \right).
 \\]
-Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more) So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
+Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more).  So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
 \\[
-   0 = \partial_t V (t,x) + f(x, a)+  b(x,a)\partial_x V (t,x).
+   0 = \inf_a \left( \partial_t V (t,x) + f(x, a)+  b(x,a)\partial_x V (t,x) \right).
 \\]
+Note that $\partial_t V (t,x)$ does not depend on the control so the **HJB equation** reads 
+\\[
+   0 =  \partial_t V (t,x) + \inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \Chi \;\;\boldsymbol[2],
+\\]
+where $\Chi$ is the space where you system evolves. $\Chi$ could be $\mathbb{R}$,$\mathbb{R}^d$, a Hilbert space, ... whatever space where you can define a calculus ! Note also that from the definition of the value function $V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right)$, we necessarily have the additional constrain on $V$ : 
+\\[
+  V(T,x) = g(x), \qquad \boldsymbol[1]
+\\]
+and that's it ! The combination of **[1]** and **[2]** constitutes the **HJB equation**. It is a **partial differential equation with a terminal condition**. Now you know that the **value function** solves **[1]** and **[2]**.
 
+__Ok so...what next ?__
+From now on the procedure is very simple :
+1. Solve the **HJB equation** (i.e. **[1]** **[2]**) to obatin the value fonction $(t,x) \mapsto V(t,x)$.
+2. At every (t,x), find an optimal control $\alpha^\star(t,x)$ such that 
+\\[
+\inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right) = f(x, \alpha^*(t,x))+  b(x,\alpha^\star(t,x))\partial_x V (t,x)
+\\]
+Great ! At the end of this procedure you will have the value function $(t,x) \mapsto V(t,x)$ and the **optimal control** in a [feedback form](https://en.wikipedia.org/wiki/Feedback#Control_theory) $(t,x) \mapsto \alpha^\star(t,x)$. 
 
-__Ok so... what next ?__
-
-Can you solve the problem explicitly ?
+Can you solve the problem explicitly ? (Theory is nice but explicit things also)
 =====
-Usually no, in generak we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
+Usually no, in general we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
 \\[ d X_t = (A X_t + B X_t) dt. \\]
 and the **cost criterion**  : 
 \\[J(t,x,\alpha) = \int_t^T Q X_s^2 + N \alpha_s^2 ds + P X_T^2, \\]
