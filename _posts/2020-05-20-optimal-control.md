@@ -78,7 +78,7 @@ Then the thing is to notice that **the remaining decisions must constitute an op
 \\]
 Now you might see me coming, let's see what happends when $h \to 0$ :  
 \\[
-   V(t,x) = \inf_a \left( h ( f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \right).
+   V(t,x) = \inf_a \left( h  f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \right).
 \\]
 Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more).  So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
 \\[
@@ -86,20 +86,21 @@ Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (se
 \\]
 Note that $\partial_t V (t,x)$ does not depend on the control so the **HJB equation** reads 
 \\[
-   0 =  \partial_t V (t,x) + \inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \Chi \;\;\boldsymbol[2],
+   0 =  \partial_t V (t,x) + \inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \mathbb{X} \;\;\boldsymbol[1],
 \\]
-where $\Chi$ is the space where you system evolves. $\Chi$ could be $\mathbb{R}$,$\mathbb{R}^d$, a Hilbert space, ... whatever space where you can define a calculus ! Note also that from the definition of the value function $V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right)$, we necessarily have the additional constrain on $V$ : 
+where $\mathbb{X} $ is the space where you system evolves. $\Chi$ could be $\mathbb{R}$,$\mathbb{R}^d$, a Hilbert space, ... whatever space where you can define a calculus ! Note also that from the definition of the value function $V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right)$, we necessarily have the additional constrain on $V$ : 
 \\[
-  V(T,x) = g(x), \qquad \boldsymbol[1]
+  V(T,x) = g(x), \qquad \boldsymbol[2]
 \\]
 and that's it ! The combination of **[1]** and **[2]** constitutes the **HJB equation**. It is a **partial differential equation with a terminal condition**. Now you know that the **value function** solves **[1]** and **[2]**.
 
 __Ok so...what next ?__
+
 From now on the procedure is very simple :
-1. Solve the **HJB equation** (i.e. **[1]** **[2]**) to obatin the value fonction $(t,x) \mapsto V(t,x)$.
+1. Solve the **HJB equation** (i.e. **[1]**-**[2]**) to obtain the value fonction $(t,x) \mapsto V(t,x)$.
 2. At every (t,x), find an optimal control $\alpha^\star(t,x)$ such that 
 \\[
-\inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right) = f(x, \alpha^*(t,x))+  b(x,\alpha^\star(t,x))\partial_x V (t,x)
+\inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right) = f(x, \alpha^\star(t,x))+  b(x,\alpha^\star(t,x))\partial_x V (t,x)
 \\]
 Great ! At the end of this procedure you will have the value function $(t,x) \mapsto V(t,x)$ and the **optimal control** in a [feedback form](https://en.wikipedia.org/wiki/Feedback#Control_theory) $(t,x) \mapsto \alpha^\star(t,x)$. 
 
