@@ -55,7 +55,7 @@ Basically 2 things : you want the **optimal control** $\alpha^*$ and the price y
 
 Nice ! How can I get them in general ?
 ====
-There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly present it ! 
+There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly explain what it means and how we can use it to obtain the [Hamilton-Jacobi-Bellman equation](https://en.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi%E2%80%93Bellman_equation) ! 
 
 __What is the Bellman principle ?__
 
