@@ -88,7 +88,7 @@ Note that $\partial_t V (t,x)$ does not depend on the control so the **HJB equat
 \\[
    0 =  \partial_t V (t,x) + \inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \mathbb{X} \;\;\boldsymbol[1],
 \\]
-where $\mathbb{X} $ is the space where you system evolves. $\Chi$ could be $\mathbb{R}$,$\mathbb{R}^d$, a Hilbert space, ... whatever space where you can define a calculus ! Note also that from the definition of the value function $V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right)$, we necessarily have the additional constrain on $V$ : 
+where $\mathbb{X}$ is the space where you system evolves. $\mathbb{X}$ could be $\mathbb{R}$, $\mathbb{R}^d$, a Hilbert space, ... actuelly whatever space where you can define a calculus ! Note also that from the definition of the value function $V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right)$, we necessarily have the additional constrain on $V$ : 
 \\[
   V(T,x) = g(x), \qquad \boldsymbol[2]
 \\]
