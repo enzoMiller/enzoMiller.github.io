@@ -123,7 +123,7 @@ a = a^\star(t,x) = -N^{-1}B \partial_x V(t,x).
 \\]
 
 \\[
-   0 =  \partial_t V (t,x) + Q x^2 + A x \partial_x V (t,x), \qquad t \in [0,T], x \in \mathbb{X}, V(T,x) = P x^2.
+   0 =  \partial_t V (t,x) + Q x^2 + A x \partial_x V (t,x), \qquad V(T,x) = P x^2.
 \\]
 
 
