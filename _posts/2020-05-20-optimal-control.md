@@ -78,7 +78,7 @@ Then the thing is to notice that **the remaining decisions must constitute an op
 \\]
 Now you might see me coming, let's see what happends when $h \to 0$ :  
 \\[
-   V(t,x) = \inf_a \left( h  f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \right).
+   V(t,x) = \inf_a \big( h  f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \big).
 \\]
 Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more).  So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
 \\[
@@ -107,11 +107,24 @@ Great ! At the end of this procedure you will have the value function $(t,x) \ma
 Can you solve the problem explicitly ? (Theory is nice but explicit things also)
 =====
 Usually no, in general we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
-\\[ d X_t = (A X_t + B X_t) dt. \\]
+\\[  X_t = X_0 + \int_0^t (A X_s + B X_s) dt. \\]
 and the **cost criterion**  : 
 \\[J(t,x,\alpha) = \int_t^T Q X_s^2 + N \alpha_s^2 ds + P X_T^2, \\]
 were $A,B,Q,N$ could be real numbers, matrices, [linear operator](https://mathworld.wolfram.com/LinearOperator.html), etc.
-As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it !
+As you may have noticed the **eagle & bird** problem has this kind of structure, so let's solve it ! 
+
+First let's find the **value function**, i.e. solve the HJB equation. Here $b(x,a) = A x + B a$ and $f(x,a) = Qx^2 + N a^2$, so the HJB equation reads 
+\\[
+   0 =  \partial_t V (t,x) + \inf_a \left(Q x^2 + N a^2+  (Ax + B a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \mathbb{X}, V(T,x) = P x^2.
+\\]
+Note that $\inf_a \left(Q x^2 + N a^2+  (Ax + B a)\partial_x V (t,x) \right)$ is minimized for 
+\\[
+a = a^\star(t,x) = -N^{-1}B \partial_x V(t,x).
+\\]
+
+\\[
+   0 =  \partial_t V (t,x) + Q x^2 + A x \partial_x V (t,x), \qquad t \in [0,T], x \in \mathbb{X}, V(T,x) = P x^2.
+\\]
 
 
 
