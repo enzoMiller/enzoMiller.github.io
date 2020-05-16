@@ -76,11 +76,11 @@ Then the thing is to notice that **the remaining decisions must constitute an op
 \\[
   V(t,x) =\inf_\alpha \left(  \int_t^{t+h} f(X_s, \alpha_s) ds + V(t+h,X_{t+h}) \right).
 \\]
-Now you might see me coming, let's see what happends when $h \to 0$ :  
+Now let's see what happends when $h \to 0$ and do a little [Taylor expansion](https://en.wikipedia.org/wiki/Taylor_series) :
 \\[
-   V(t,x) = \inf_a \big( h  f(x, a)   + V(t,x) + h (\partial_t V (t,x) + b(x,a)\partial_x V (t,x)) + o(h) \big).
+   V(t,x) = \inf_a \big( h  f(x, a)   + V(t,x) + h \big(\partial_t V (t,x) + \langle \partial_x V (t,x), b(x,a) \rangle \big) + o(h) \big).
 \\]
-Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more).  So, by simplifying by $V(t,x)$ and dividing by $h$ we get 
+Here the $o(h)$ notation denotes a function such that $\frac{o(h)}{h} \to 0$ (see [this page](https://www.tutorialspoint.com/little-oh-notation-o) to know more).  Then, by simplifying by $V(t,x)$ and dividing by $h$ we get 
 \\[
    0 = \inf_a \left( \partial_t V (t,x) + f(x, a)+  b(x,a)\partial_x V (t,x) \right).
 \\]
@@ -115,11 +115,11 @@ As you may have noticed the **eagle & bird** problem has this kind of structure,
 
 First let's find the **value function**, i.e. solve the HJB equation. Here $b(x,a) = A x + B a$ and $f(x,a) = Qx^2 + N a^2$, so the HJB equation reads 
 \\[
-   0 =  \partial_t V (t,x) + \inf_a \left(Q x^2 + N a^2+  (Ax + B a)\partial_x V (t,x) \right), \qquad t \in [0,T], x \in \mathbb{X}, V(T,x) = P x^2.
+   0 =  \partial_t V (t,x) + \inf_a \left(Q x^2 + N a^2+  \partial_x V (t,x),  \right), \qquad t \in [0,T], x \in \mathbb{X}, V(T,x) = P x^2.
 \\]
 Note that $\inf_a \left(Q x^2 + N a^2+  (Ax + B a)\partial_x V (t,x) \right)$ is minimized for 
 \\[
-a = a^\star(t,x) = -N^{-1}B \partial_x V(t,x).
+a = a^\star(t,x) = -N^{-1}B^\star \partial_x V(t,x).
 \\]
 
 \\[
