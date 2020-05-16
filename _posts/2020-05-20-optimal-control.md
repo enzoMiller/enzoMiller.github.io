@@ -14,7 +14,7 @@ To convey the main ideas, as briefly as possible, I will present the minimum nec
 
 # Table of contents
 1. [Tell me what is optimal control ?](#whatIs)
-2. [Humm...can you give me an example ?](#example)
+2. [Humm...can you give some examples ?](#example)
     1. [A toy example : An eagle an a bird](#subparagraph1)
     2. [Battery management](#battery)
 3. [Ok so... What do we want ?](#whatDoWeWant)
@@ -24,9 +24,8 @@ To convey the main ideas, as briefly as possible, I will present the minimum nec
 5. [An explicit solution](#explicit)
     
 
-| cjef ncjf |
-| czdl,c |
-| cd |
+| cvfe,knvjkfnvjfnv  |
+|---|
 
 
 
