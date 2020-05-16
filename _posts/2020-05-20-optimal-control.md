@@ -24,9 +24,9 @@ To convey the main ideas, as briefly as possible, I will present the minimum nec
 5. [An explicit solution](#explicit)
     
 
-| cjefncjf
-| czdl,c
-| cd
+| cjef ncjf |
+| czdl,c |
+| cd |
 
 
 
