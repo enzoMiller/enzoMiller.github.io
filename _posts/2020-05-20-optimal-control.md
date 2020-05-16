@@ -13,8 +13,8 @@ This is a very non-mathematical and straightforward presentation of what is opti
 To convey the main ideas, as briefly as possible, I will present the minimum necessary package. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
 
-So...what is optimal control ?
-=
+# So...what is optimal control ?
+
   
 Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
@@ -33,9 +33,9 @@ The number $J(t,x,\alpha)$ is to be interpreted as *the total ammount you will p
 Note here the introduction of a new function : the **value function** $V$. Basically, $V(t,x)$ tells you how much you are going to pay if, starting from $x$ at time $T$, you apply until the end an optimal strategy $\alpha^\star$ (we like to put stars on things that are optimal : $\alpha^\star$ denotes an optimal strategy, so that $V(t,x)=J(t,x,\alpha^\star)$). 
 
 
-Humm...can you give me an example ?
-==
-__A toy example : An eagle an a bird__ 
+# Humm...can you give me an example ?
+
+## A toy example : An eagle an a bird
 
 Assume you are an eagle. You are hungry. You want to eat. So you are seeking a prey to get close to. Here your **state** is your position in space $X \in \mathbb{R}^3$. Your **control** $\alpha$ is your speed, so **the model of your system** is $\frac{d X_t}{dt} = \alpha_t$ with $x$ being your initial position. Or as we prefer to write 
 \\[X_t = x + \int_0^t \alpha_s ds. \\]
@@ -48,16 +48,16 @@ If you're intersted to see an example closer to the real world with a real imple
 
 
 
-Ok so... What do we want ?
-===
+# Ok so... What do we want ?
+
 Basically 2 things : you want the **optimal control** $\alpha^*$ and the price you're going to pay, i.e. the **value fonction** $(t,x) \mapsto V(t,x)$. 
 
 
-Nice ! How can I get them in general ?
+# Nice ! How can I get them in general ?
 ====
 There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly explain what it means and how we can use it to obtain the [Hamilton-Jacobi-Bellman equation](https://en.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi%E2%80%93Bellman_equation) ! 
 
-__What is the Bellman principle ?__
+## What is the Bellman principle ?
 
 I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book : *Dynamic programming*) :
 > An optimal policy has the property that whatever the initial decision is, the remaining decisions must constitute an optimal policy (with regard to the state resulting from the first decision)
@@ -94,7 +94,7 @@ where $\mathbb{X}$ is the space where you system evolves. $\mathbb{X}$ could be 
 \\]
 and that's it ! The combination of **[1]** and **[2]** constitutes the **HJB equation**. It is a **partial differential equation with a terminal condition**. Now you know that the **value function** solves **[1]** and **[2]**.
 
-__Ok so...what should I do now ?__
+## Ok so...what should I do now ?
 
 From now on the procedure is very simple :
 1. Solve the **HJB equation** (i.e. **[1]**-**[2]**) to obtain the value fonction $(t,x) \mapsto V(t,x)$.
@@ -104,8 +104,8 @@ From now on the procedure is very simple :
 \\]
 Great ! At the end of this procedure you will have the value function $(t,x) \mapsto V(t,x)$ and the **optimal control** in a [feedback form](https://en.wikipedia.org/wiki/Feedback#Control_theory) $(t,x) \mapsto \alpha^\star(t,x)$. Now you could ask : "How do I solve the HJB equation ?". I'm glad you ask ! Recently neural nets have been used to solve partial differential equations (see [this article](https://arxiv.org/abs/1708.07469) for instance, or this [blog post]()). Note also that in this [blog post](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) I prensent a quite different way to solve the optimal control problem with neural nets.
 
-Can you solve the problem explicitly ? (Theory is nice but explicit things also)
-=====
+# Can you solve the problem explicitly ? (Theory is nice but explicit things also)
+
 Usually no, in general we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
 \\[  X_t = X_0 + \int_0^t (A X_s + B X_s) dt. \\]
 and the **cost criterion**  : 
