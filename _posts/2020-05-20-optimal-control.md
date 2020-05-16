@@ -18,7 +18,7 @@ To convey the main ideas, as briefly as possible, I will present the minimum nec
     1. [Sub paragraph](#subparagraph1)
 3. [Another paragraph](#paragraph2)
 
-## This is the introduction <a name="introduction"></a>
+# This is the introduction <a name="introduction"></a>
 Some introduction text, formatted in heading 2 style
 
 ## Some paragraph <a name="paragraph1"></a>
