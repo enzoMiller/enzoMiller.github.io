@@ -13,15 +13,15 @@ This is a very non-mathematical and straightforward presentation of what is opti
 To convey the main ideas, as briefly as possible, I will present the minimum necessary package. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
 # Table of contents
-1. [Tell me what is optimal control ?](#whatIs)
-2. [Humm...can you give some examples ?](#example)
+1. [What is optimal control ?](#whatIs)
+2. [Can you give some examples ?](#example)
     1. [A toy example : An eagle an a bird](#subparagraph1)
     2. [Battery management](#battery)
-3. [Ok so... What do we want ?](#whatDoWeWant)
-4. [How could I get get Value function & optimal control ?](#solve)
-    1. [The Bellman principle](#bellman)
-    2. [The procedure](#procedure)
-5. [An explicit solution](#explicit)
+3. [What do we need in optimal control ?](#whatDoWeWant)
+4. [How could I get it ?](#solve)
+    1. [Bellman principle](#bellman)
+    2. [Pipeline](#procedure)
+5. [The (explicit) linear quadratic case](#explicit)
     
 
 # Tell me what is optimal control ? <a name="whatIs"></a>
