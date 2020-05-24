@@ -1,5 +1,5 @@
 ---
-title: 'A short introduction to optimal control - In preparation !'
+title: 'A short introduction to optimal control'
 date: 2020-05-20
 permalink: /posts/2020/05/optimal-control/
 tags:
