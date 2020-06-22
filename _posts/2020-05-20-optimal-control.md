@@ -136,7 +136,7 @@ Here $B^\star$ denotes the [adjoint](https://www.encyclopediaofmath.org/index.ph
 \\[
    0 =  \partial_t V (t,x) + Q x^2 + A x \partial_x V (t,x) - \frac{N^{-1}}{4} (B \partial_x V(t,x))^2, \qquad V(T,x) = P x^2.
 \\]
-At this point you could say : "I'm not solving this !". But do not worry, here we are lucky. Try this [ansatz](https://en.wikipedia.org/wiki/Ansatz) for the value function :
+At this point you could say : "I'm not solving this ! Too boring !". Yes but do not worry, here we are lucky. Try this [ansatz](https://en.wikipedia.org/wiki/Ansatz) for the value function :
 \\[
   V(t,x) = K_t x^2, 
 \\]
@@ -148,11 +148,11 @@ Then note that it is necessary and sufficient for $K$ to satisfy
 \\[
   \dot{K}_t + Q + A^\star K + K A  - K_t B N^{-1} B^\star K_t = 0, \qquad K_T = P
 \\]
-which is called a [Riccati equation](https://en.wikipedia.org/wiki/Riccati_equation). That's it we have now what we want ! 
+which is called a [Riccati equation](https://en.wikipedia.org/wiki/Riccati_equation). That's it, we now have what we want ! 
 Indeed we have 
 - The **value function** : V(t,x) = K_t x^2,
 - The **optimal control** : $\alpha^\star(t,x) = - N^{-1} B^\star K_t x $.
-The only difficulty that's remains is to compute $K$. I won't talk about it in this post but be reassured this not a big issue anymore ! 
+The only difficulty that remains is to compute $K$. I won't talk about it in this post but be reassured, this not a big issue anymore ! 
 
 
 
