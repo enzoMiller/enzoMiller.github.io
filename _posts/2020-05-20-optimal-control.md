@@ -10,7 +10,7 @@ This is a very non-mathematical and straightforward presentation of what is opti
 1. What it is mainly about,
 2. Some ideas to solve the problems we are about to see. 
 
-To convey the main ideas, as briefly as possible, I will present the minimum necessary package. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
+To convey the main ideas, as briefly and simply as possible, I will present the minimum necessary package. Have some mercy for my informal tone and my lack of precision, I like it this way because it allows our imagination to fill the gaps and go further ;)
 
 # Table of contents
 1. [What is optimal control ?](#whatIs)
