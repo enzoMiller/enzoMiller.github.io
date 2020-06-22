@@ -146,7 +146,7 @@ where $t \in [0,T] \mapsto K_t$ is a function that we have to determine. To find
 \\]
 Then note that it is necessary and sufficient for $K$ to satisfy
 \\[
-  \dot{K}_t + Q + A^\star K + K A  - K_t B N^{-1} B^\star K_t = 0, \qquad K_T = P
+  \dot{K}_t + Q + A^\star K_t + K_t A  - K_t B N^{-1} B^\star K_t = 0, \qquad K_T = P
 \\]
 which is called a [Riccati equation](https://en.wikipedia.org/wiki/Riccati_equation). That's it, we now have what we want ! 
 Indeed we have 
