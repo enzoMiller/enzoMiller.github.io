@@ -1,0 +1,11 @@
+---
+title: 'Solving diffenrential equations with neural nets !'
+date: 2020-07-26
+permalink: /posts/2020/05/nn-pdes/
+tags:
+  - pdes
+  - neural network
+  - differential equations
+---
+
+<script src="https://gist.github.com/enzoMiller/ab9a3776fc0715e1c2e746467929af26.js"></script>
