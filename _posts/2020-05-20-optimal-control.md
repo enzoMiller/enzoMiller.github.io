@@ -150,9 +150,9 @@ Then note that it is necessary and sufficient for $K$ to satisfy
 \\]
 which is called a [Riccati equation](https://en.wikipedia.org/wiki/Riccati_equation). That's it, we now have what we want ! 
 Indeed we have 
-- The **value function** : V(t,x) = K_t x^2,
+- The **value function** : $V(t,x) = K_t x^2$,
 - The **optimal control** : $\alpha^\star(t,x) = - N^{-1} B^\star K_t x $.
-The only difficulty that remains is to compute $K$. I won't talk about it in this post but be reassured, this not a big issue anymore ! 
+The only difficulty that remains is to compute $K$. I won't talk about it in this post but be reassured, this not a big issue anymore ! There are plenty of ways to compute solutions of differential equations that I won't go through here but if you're interested into a quite new way of dealing with any differential equations you can go read this [post](https://enzomiller.github.io/posts/2020/07/nn-pdes/) where I give a minimal starter code to solve a differential equation with neural nets ! 
 
 
 
