@@ -55,7 +55,7 @@ Sundenly a moving prey appears, its position is $P_t$. Now here is the thing. Yo
 where $\lambda$ and $N$ are given constants. As you can see, the bigger $\lambda$ is, the more you want to get close to your prey (you *penalize* the fact of being far from it); the bigger $N$ is, the more it costs you to go fast. That's it ! We have defined a **model**, **loss criterion** and the only things that remains to do is to **solve the minimization** problem ! (See below)
 
 ## Battery management  <a name="battery"></a>
-If you're intersted to see an example closer to the real world with a real implementation with neural nets you can go to this  [posts](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! (it's about electric battery storage and how to optimally control it when you want to minimize its bill when you have a solar panel, a grid, random market prices, etc. This a project I did with the electrocity company [EDF](https://fr.wikipedia.org/wiki/%C3%89lectricit%C3%A9_de_France).) 
+If you're intersted to see an example closer to the real world with a real implementation with neural nets you can go to this  [posts](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) ! (it talks about electricity storage and how to optimally control a battery when you want to minimize the bill. It assumes that you have a solar panel, a random consumption, random market prices, etc. This a project I did with the electricity company [EDF](https://fr.wikipedia.org/wiki/%C3%89lectricit%C3%A9_de_France).) 
 
 
 
