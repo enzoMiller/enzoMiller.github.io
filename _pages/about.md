@@ -16,4 +16,4 @@ My research interest lies at the boundary between stochastic control, infinite d
 
 Other activities
 ======
-In my spare time, I work for the company [Qovoltis](https://www.qovoltis.com/en/qovoltis-smarter-charging/) to help them build smart charging station for electric vehicules. I suggest you check their website, it's a really cool growing company with a strong determination to be on the technological forefront !
+In my spare time, I help [Qovoltis](https://www.qovoltis.com/en/qovoltis-smarter-charging/) to build smart charging stations for electric vehicules. I suggest you check their website, it's a really cool growing company with a strong determination to be on the technological forefront !
