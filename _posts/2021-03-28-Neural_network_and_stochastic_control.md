@@ -7,6 +7,8 @@ tags:
   - neural network
 ---
 
+![alt-text](https://github.com/enzoMiller/Optimal-control-with-neural-nets/blob/e574597e73c4dadcbff3ad16716a42e6764597aa/control.gif)
+
 In this post, we are going to see how to use neural network to solve optimal (or stochatic) control problems. The use of deep learning to such task is quite recent in. 
 in the control community, see [this paper](https://www.pnas.org/content/pnas/115/34/8505.full.pdf) or [this one](https://arxiv.org/pdf/1812.05916.pdf) to name just a few; and as you'll see, its approach differs quite a bit from the one we are used to see in the reinforcement learning community. 
 
