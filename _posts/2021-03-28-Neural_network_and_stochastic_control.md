@@ -8,18 +8,16 @@ tags:
 ---
 
 
-
-In this post, we are going to see how to use neural network to solve optimal (or stochastic) control problems. The use of deep learning to such task is quite recent in. 
-in the control community, see [this paper](https://www.pnas.org/content/pnas/115/34/8505.full.pdf) or [this one](https://arxiv.org/pdf/1812.05916.pdf) to name just a few; and as you'll see, its approach differs quite a bit from the one we are used to see in the reinforcement learning community. 
+In this post, we are going to see how to use neural network to solve optimal (or stochastic) control problems. The use of deep learning to such task is quite recent in in the control community, see [this paper](https://www.pnas.org/content/pnas/115/34/8505.full.pdf) or [this one](https://arxiv.org/pdf/1812.05916.pdf) to name just a few; and as you'll see, its approach differs quite a bit from the one we are used to see in the reinforcement learning community. 
 
 <iframe src="https://giphy.com/embed/ix8yJ9ZwYW5zJprbTN" width="480" height="360" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/ix8yJ9ZwYW5zJprbTN">via GIPHY</a></p>
 
 
 # Table of contents
 1. [The model](#whatIs)
-TO COMPLETE
+TO DO
 2. [The method of resolution](#example)
-TO COMPLETE
+TO DO
 
 
 # The model 
