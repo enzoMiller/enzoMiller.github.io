@@ -27,7 +27,7 @@ To convey the main ideas, as briefly and simply as possible, I will present the 
 # Tell me what is optimal control ? <a name="whatIs"></a>
 
   
-Okay let's give a short answer : *You have a thing/system which is moving with time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
+Okay let's give a short answer : *You have a thing/system which is moving through time and over which you have a control. Your goal is then to choose the best control in order to minimize a cost*. In general you have **3 features** that you monitor : 
 - **A state of a system**, denoted $X$,
 - **A control** $\alpha$ over $X$,
 - **A Loss criterion** $J$ that you want to minimize.
@@ -66,7 +66,7 @@ Basically 2 things : you want the **optimal control** $\alpha^*$ and the price y
 
 # Nice ! How can I get them in general ? <a name="solve"></a>
 ====
-There many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly explain what it means and how we can use it to obtain the [Hamilton-Jacobi-Bellman equation](https://en.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi%E2%80%93Bellman_equation) ! 
+There are many different ways to approach this. The differents methods ([Bellman principle](https://en.wikipedia.org/wiki/Bellman_equation), [Pontryaguin principle](https://en.wikipedia.org/wiki/Pontryagin%27s_maximum_principle), etc) are of course related and have strong links together. I tend to think that a human being would prefer to see the Bellman principle first, so in this post I will quickly explain what it means and how we can use it to obtain the [Hamilton-Jacobi-Bellman equation](https://en.wikipedia.org/wiki/Hamilton%E2%80%93Jacobi%E2%80%93Bellman_equation) ! 
 
 ## What is the Bellman principle ? <a name="bellman"></a>
 
