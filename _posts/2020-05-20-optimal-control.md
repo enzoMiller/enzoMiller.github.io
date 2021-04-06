@@ -112,12 +112,12 @@ From now on the procedure is very simple :
 \\[
 \inf_a \left(f(x, a)+  b(x,a)\partial_x V (t,x) \right) = f(x, \alpha^\star(t,x))+  b(x,\alpha^\star(t,x))\partial_x V (t,x)
 \\]
-Great ! At the end of this procedure you will have the value function $(t,x) \mapsto V(t,x)$ and the **optimal control** in a [feedback form](https://en.wikipedia.org/wiki/Feedback#Control_theory) $(t,x) \mapsto \alpha^\star(t,x)$. Now you could ask : "How do I solve the HJB equation ?". I'm glad you ask ! Recently neural nets have been used to solve partial differential equations (see [this article](https://arxiv.org/abs/1708.07469) for instance, or this [blog post]()). Note also that in this [blog post](https://enzomiller.github.io/posts/2020/06/stochastic-control-storage-deep-learning/) I prensent a quite different way to solve the optimal control problem with neural nets.
+Great ! At the end of this procedure you will have the value function $(t,x) \mapsto V(t,x)$ and the **optimal control** in a [feedback form](https://en.wikipedia.org/wiki/Feedback#Control_theory) $(t,x) \mapsto \alpha^\star(t,x)$. Now you could ask : "How do I solve the HJB equation ?". I'm glad you ask ! Recently neural nets have been used to solve partial differential equations (see [this article](https://arxiv.org/abs/1708.07469) for instance, or this [blog post](https://enzomiller.github.io/posts/2020/07/nn-pdes/)). Note also that in this [blog post](https://enzomiller.github.io/posts/2020/05/neural-net_optimal-control/) I prensent a quite different way to solve the optimal control problem with neural nets.
 
 # Can you solve the problem explicitly ? (Theory is nice but explicit things also) <a name="explicit"></a>
 
 Usually no, in general we don't have any explicit formulas for the optimal control $\alpha^*$ or the value $(t,x) \mapsto V(t,x)$ of the problem. But in some cases we do have explicit formulas ! The most classical one is the linear quadratic case where the **model** is of the form : 
-\\[  X_t = X_0 + \int_0^t (A X_s + B X_s) dt. \\]
+\\[  X_t = X_0 + \int_0^t (A X_s + B X_s) dt, \\]
 and the **cost criterion**  : 
 \\[J(t,x,\alpha) = \frac{1}{2} \int_t^T Q X_s^2 + N \alpha_s^2 ds + P X_T^2, \\]
 were $A,B,Q,N$ could be real numbers, matrices, [linear operator](https://mathworld.wolfram.com/LinearOperator.html), etc.
@@ -131,7 +131,7 @@ Then note that $\inf_a \left(Q x^2 + N a^2+  (Ax + B a)\partial_x V (t,x) \right
 \\[
 a = a^\star(t,x) = - \frac{1}{2}N^{-1}B^\star \partial_x V(t,x).
 \\]
-Here $B^\star$ denotes the [adjoint](https://www.encyclopediaofmath.org/index.php/Adjoint_operator) of $B$ (You can ignore this detail for now, I just wanted to wright the right formula:)). As you may have noticed we now have the optimal control in a feedback form $(t,x) \mapsto a^\star(t,x)$ provided we have the value function. To compute it let's see what the HJB equation looks like now that we have minimized the infimum : 
+Here $B^\star$ denotes the [adjoint](https://www.encyclopediaofmath.org/index.php/Adjoint_operator) of $B$ (You can ignore this detail for now, I just wanted to write the right formula:)). As you may have noticed we now have the optimal control in a feedback form $(t,x) \mapsto a^\star(t,x)$ provided we have the value function. To compute it let's see what the HJB equation looks like now that we have minimized the infimum : 
 \\[
    0 =  \partial_t V (t,x) + Q x^2 + A x \partial_x V (t,x) - \frac{N^{-1}}{4} (B \partial_x V(t,x))^2, \qquad V(T,x) = P x^2.
 \\]
@@ -139,7 +139,7 @@ At this point you could say : "I'm not solving this ! Too boring !". Yes but do 
 \\[
   V(t,x) = K_t x^2, 
 \\]
-where $t \in [0,T] \mapsto K_t$ is a function that we have to determine. To find $K$ first note that necessarily it must satisfy this final condition $K_T = P$. Now to determine $K$, plug this ansatz into the HJB equation above : you should get
+where $t \in [0,T] \mapsto K_t$ is a function that we have to determine. To find $K$, first note that necessarily it must satisfy this final condition $K_T = P$. Now to determine $K$, plug this ansatz into the HJB equation above : you should get
 \\[
   0 =  x^2 \bigg( \dot{K}_t Q + A^\star K + K A  - K_t B N^{-1} B^\star K_t \bigg).
 \\]
