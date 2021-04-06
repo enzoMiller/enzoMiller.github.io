@@ -76,7 +76,7 @@ I stumbled upon this nice sentence on Wikipedia (paraphrased from Bellman's book
 
 So now imagine yourself wanting to act optimally. You are in state $x$ at time $t$ and you want to know the minimal price you will pay, i.e. $V(t,x)$ if from now on you act optimally. Recall the definition of the value function :
 \\[
-  V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right),
+  V(t,x) = \inf_\alpha \left( \int_t^T f(X_s, \alpha_s) ds + g(X_T) \right).
 \\]
 **Now pay attention we will use the Bellman principle !** let's use the citation and cut our trajectory into 2 pieces : one from $t$ to $t+h$, and another one from $t+h$ to $T$ : 
 \\[
