@@ -12,8 +12,8 @@ I am a PhD student at [LPSM](https://www.lpsm.paris/) (Laboratoire de Probabilit
 
 Research interests
 ======
-My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them. 
+My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them. Currently, I'm looking at how to apply the signature to optimal control. On a more applied side, I developp neural network based algorithms for stochastic control of high dimensional objects. 
 
 Other activities
 ======
-In my spare time, I help [Qovoltis](https://www.qovoltis.com/en/qovoltis-smarter-charging/) build smart charging stations for electric vehicules. I suggest you check their website, it's a really cool growing company with a strong determination to be on the technological forefront !
+In my spare time, I help [Qovoltis](https://www.qovoltis.com/en/qovoltis-smarter-charging/) build smart charging stations for electric vehicules. I suggest you check their website, it's a really cool growing company with a strong determination to be on the technological forefront ! 
