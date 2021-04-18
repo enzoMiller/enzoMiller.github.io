@@ -18,6 +18,6 @@ As explained below, the method allows us to find explicit solutions which might 
 1. [Reminder on the classical (markovian) Linear-Quadratic case](#lq)
 1. [Dynamic with delays][Link to paper](https://hal.archives-ouvertes.fr/hal-03145949v3/document)
 2. [Volterra case (rough noise, fractional Brownian motion, etc)](#volterra)
-    a. [Convolution type] (See [this paper](https://imstat.org/wp-content/uploads/2020/11/AAP1645.pdf))
-    b. [Non convolution type] (unpublished yet)
+    1. [Convolution type] (See [this paper](https://imstat.org/wp-content/uploads/2020/11/AAP1645.pdf))
+    2. [Non convolution type] (unpublished yet)
 3. [On the use of the signature : a general linearization on the path space](#sig)(unpublished yet)
