@@ -14,7 +14,7 @@ In this post, we are going to see how to use neural network to solve optimal (or
 
 
 # Table of contents
-1. [The model](#whatIs)
+1. [A key concept : dynamic programming](#whatIs)
 TO DO
 2. [The method of resolution](#example)
 TO DO
