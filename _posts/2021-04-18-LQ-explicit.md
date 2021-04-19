@@ -1,5 +1,5 @@
 ---
-title: 'A general method for explicit solution of (non markovian) control problem'
+title: 'A general method for explicit solution of (non markovian) control problem (In progress)'
 date: 2021-04-18
 permalink: /posts/2020/05/LQ-explicit/
 tags:
