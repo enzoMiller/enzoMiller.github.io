@@ -1,5 +1,5 @@
 ---
-title: 'Neural network and stochastic control'
+title: 'Neural network and stochastic control (In progress)'
 date: 2021-03-28
 permalink: /posts/2020/05/neural-net_optimal-control/
 tags:
