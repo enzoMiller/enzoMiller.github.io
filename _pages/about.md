@@ -12,7 +12,7 @@ I am a PhD student at [LPSM](https://www.lpsm.paris/) (Laboratoire de Probabilit
 
 Research interests
 ======
-My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them. Currently, I'm looking at how to apply the signature to optimal control. On a more applied side, I develop neural network based algorithms for stochastic control of high dimensional objects. 
+My research interest lies at the boundary between stochastic control, infinite dimensional structures and non-markovian settings (delay, Volterra, fractional noise,...). My work focuses on exhibiting the nice structures behind some classes of non-markovian problems and designing efficient algorithms to solve them. Currently, I'm looking at how to apply the rough path signature to optimal control (I suggest you look at [this very nice paper](https://arxiv.org/abs/1603.03788) to have an introduction to this object). On a more applied side, I develop neural network based algorithms for stochastic control of high dimensional objects. 
 
 Other activities
 ======
